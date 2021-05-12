@@ -13,20 +13,20 @@
         </li>
 
 <!-- was clothing -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="savoury-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=savoury" class="logo-font font-weight-bold nav-link text-black mr-5" id="savoury-link" aria-haspopup="true" aria-expanded="false">
                 Savoury
             </a>
         </li>
 <!-- was homeware -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="sweet-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=sweet" class="logo-font font-weight-bold nav-link text-black mr-5" id="sweet-link" aria-haspopup="true" aria-expanded="false">
                 Sweet
             </a>
         </li>
 <!-- was specials -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="campfire-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=campfire" class="logo-font font-weight-bold nav-link text-black" id="campfire-link" aria-haspopup="true" aria-expanded="false">
                 CampFire
             </a>
         </li>
