@@ -1,4 +1,5 @@
 import uuid
+
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
@@ -23,17 +24,15 @@ class Order(models.Model):
 
 
     def _generate_order_number(self):
-    """ 
-    Generates a random unique order number 
-    """
-
+        """ 
+        Generates a random unique order number 
+        """
         return uuid.uuid4().hex.upper()
-  
-    def update_total(self):
-    """ 
-    Updates grand total each time a new line item is added including delivery costs
-    """
 
+    def update_total(self):
+        """ 
+        Updates grand total each time a new line item is added including delivery costs
+        """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total_sum']
 
         self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
@@ -41,12 +40,12 @@ class Order(models.Model):
         self.grand_total = self.order_total + self.delivery_cost
 
         self.save()
-    
+
     def save(self, *args, **kwargs):
-    """ 
-    Override the original save method to set the order number
-    if it hasn't already been set
-    """
+        """ 
+        Override the original save method to set the order number
+        if it hasn't already been set
+        """
         if not self.order_numer:
             self.order_numer = self._generate_order_number()
             super().save(*args, **kwargs)
@@ -59,16 +58,15 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False
-    )
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
-    """ 
-    Override the original save method to set the order number
-    if it hasn't already been set
-    """
+        """ 
+        Override the original save method to set the order number
+        if it hasn't already been set
+        """
         self.lineitem_total = self.product.price * self.quantity
-            super().save(*args, **kwargs)
-    
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
