@@ -1,6 +1,6 @@
 Hi {{ order.full_name }}!
 
-This is a confirmation of your order with Camper Hampers. Your order information is below:
+Thank you for your order today with Camper Hampers! Your order information is below:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.order_date }}
