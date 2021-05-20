@@ -6,6 +6,7 @@ from .forms import UserProfileForm
 
 from checkout.models import Order
 
+
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -22,7 +23,7 @@ def profile(request):
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'order': orders,
+        'orders': orders,
         'on_profile_page': True,
     }
 
