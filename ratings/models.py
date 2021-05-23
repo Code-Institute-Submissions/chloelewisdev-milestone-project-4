@@ -18,6 +18,7 @@ class Rating(models.Model):
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     rating_title = models.CharField(max_length=200)
+    rating_description = models.TextField(blank=True, null=True, default='')
     rating_score = models.IntegerField(choices=rating)
     date = models.DateTimeField(auto_now_add=True)
 
