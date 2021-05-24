@@ -70,6 +70,7 @@ def product_detail(request, product_id):
     
     return render(request, 'products/product_detail.html', context)
 
+
 def add_product(request):
     """ Add a product to the store """
     if request.method == 'POST':
@@ -89,6 +90,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 def edit_product(request, product_id):
     """ Edit a product in the store """

@@ -109,6 +109,26 @@
                 </div>
             </div>
         </div>
+        <!--div class="container">
+            <div class="row">
+                <h3>Ratings</h3>
+                    <div class="text-center">
+                        <a href="{% url 'add_rating' product.id %}" type="button" class="btn">Add a rating</a>
+                    </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                {% for rating in ratings %}
+                <div class="col-12 col-lg-4 text-center">
+                    <p>{{ rating.rating_title }}</p>
+                    <p>{{ rating.rating_description</p>
+                    <p>{{ rating.rating_score }} /5</p>
+                    <p>{{ rating.user_profile }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div-->
     </div>
 {% endblock %}
 
