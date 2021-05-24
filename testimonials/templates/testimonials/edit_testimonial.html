@@ -33,7 +33,7 @@
 </div>
 <div class="container">
     <div class="row justify-content-md-center mb-5">
-        <div class="col-12 col-md-6">
+        <div class="col-12">
             <form method="POST" action="{% url 'edit_testimonial' testimonial.id %}" class="form mb-5" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}

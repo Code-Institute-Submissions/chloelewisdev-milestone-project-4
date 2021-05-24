@@ -40,6 +40,9 @@
                 <small class="ml-3">
                     <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a> | 
                 </small>
+                <small class="ml-3">
+                    <a href="{% url 'delete_testimonial' testimonial.id %}">Delete</a> | 
+                </small>
                 {% endif %}
             {% endfor %}
         </div>

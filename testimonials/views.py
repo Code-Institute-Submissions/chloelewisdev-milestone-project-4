@@ -78,3 +78,19 @@ def edit_testimonial(request, testimonial_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_testimonial(request, testimonial_id):
+    """ 
+    Allows superuser to delete a testimonial
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only Camper Hampers owners can do that.')
+        return redirect(reverse('home'))
+
+    testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+    testimonial.delete()
+    messages.success(request, 'Testimonial successfully deleted.')
+
+    return redirect(reverse('testimonials'))
