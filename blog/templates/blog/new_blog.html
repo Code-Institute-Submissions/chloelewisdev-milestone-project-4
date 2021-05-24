@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h2 class="logo-font mb-4">Blog</h2>
+            <hr>
+        </div>
+    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h5 class="text-muted">Edit blog</h5>
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-md-center mb-5">
+        <div class="col-12">
+            <form method="POST" action="{% url 'edit_blog' blog.id %}" class="form mb-5" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="text-center">
+                    <a href="{% url 'blog' %}" class="btn btn-outline-dark rounded-5">Cancel</a>
+                    <button type="submit" class="btn form-button rounded-5">Update Blog</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
