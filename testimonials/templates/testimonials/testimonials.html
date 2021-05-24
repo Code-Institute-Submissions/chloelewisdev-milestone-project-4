@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+                <h2 class="logo-font mb-4">Testimonials</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {% for testimonial in testimonials %}
+            <div class="col-12 col-lg-6">
+                <p>{{ testimonial.testimonial_title }}</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p>{{ testimonial.testimonial_content }}</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p>By {{ testimonial.user }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

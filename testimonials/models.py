@@ -7,7 +7,7 @@ class Testimonial(models.Model):
     Allows users who have a profile to
     leave a testimonial about their experience
     """
-    user_profile = models.ForeignKey(
+    user = models.ForeignKey(
         UserProfile,
         on_delete=models.SET_NULL,
         null=True,

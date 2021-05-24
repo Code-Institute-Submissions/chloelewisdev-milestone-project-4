@@ -4,9 +4,9 @@ from .models import Testimonial
 
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = (
-        'user_profile',
+        'user',
         'testimonial_title',
-        'testimonial_description',
+        'testimonial_content',
     )
 
     ordering = ('testimonial_title',)
