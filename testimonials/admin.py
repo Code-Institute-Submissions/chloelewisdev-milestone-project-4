@@ -7,6 +7,7 @@ class TestimonialAdmin(admin.ModelAdmin):
         'user',
         'testimonial_title',
         'testimonial_content',
+        'created_by',
     )
 
     ordering = ('testimonial_title',)

@@ -6,7 +6,8 @@ class TestimonialForm(forms.ModelForm):
 
     class Meta:
         model = Testimonial
-        fields = '__all__'
+        exclude = ('user',)
+        fields = ['testimonial_title', 'testimonial_content', 'created_by']
 
 
     def __init__(self, *args, **kwargs):

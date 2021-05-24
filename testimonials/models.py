@@ -16,6 +16,7 @@ class Testimonial(models.Model):
     )
     testimonial_title = models.CharField(max_length=254)
     testimonial_content = models.TextField(blank=True, null=True, default='')
+    created_by = models.CharField(max_length=254, default='')
 
     def __str__(self):
         return self.testimonial_title

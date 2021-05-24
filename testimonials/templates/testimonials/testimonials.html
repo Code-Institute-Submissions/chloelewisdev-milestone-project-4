@@ -32,8 +32,15 @@
                 <p>{{ testimonial.testimonial_content }}</p>
             </div>
             <div class="col-12 col-lg-6">
-                <p>By {{ testimonial.user }}</p>
+                <p>By {{ testimonial.created_by }}</p>
             </div>
+            {% endfor %}
+            {% for testimonial in testimonials %}
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a> | 
+                </small>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
