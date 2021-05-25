@@ -11,7 +11,21 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
+<section class="container-fluid" id="hero-image">
+    <div class="row">
+        <div class="col-12">
+            <div class="max-auto" id="hero-text">
+                <h1 class="logo-font">
+                    Delicious hampers for happy campers
+                </h1>
+                <a href="{% url 'products' %}" class="logo-font shop-hampers-button btn btn-lg rounded-0 text-uppercase py-3">Shop Hampers</a>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--div class="container h-100">
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
             <h1 class="display-4 logo-font text-black">
@@ -20,10 +34,10 @@
         </div>
         <div class="my-5">
             <h4>
-                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                <a href="{% url 'products' %}" class="shop-hampers-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
             </h4>
         </div>
 
     </div>
-</div>
+</div-->
 {% endblock %}

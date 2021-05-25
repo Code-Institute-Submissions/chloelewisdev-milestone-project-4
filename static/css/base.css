@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage_banner.jpg') no-repeat center center fixed;
+    /*background: url('/media/homepage_banner.jpg') no-repeat center center fixed;*/
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -19,6 +19,8 @@ body {
     width: 1.5rem;
 }
 
+/* -------------------------------- Logo Styling */
+
 .logo-style {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
@@ -27,6 +29,47 @@ body {
     text-transform: uppercase;
 }
 
+
+/* -------------------------------- Navbar */
+@media screen and (max-width: 568px) {
+    .list-inline-item:not(:last-child) {
+        margin-right: 0rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo-style {
+        font-size: 30px;
+        }
+    }
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+/* -------------------------------- Fonts */
 .logo-font {
     font-family: 'Josefin Sans', sans-serif;
     }
@@ -39,11 +82,45 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* -------------------------------- index.html styles */ 
 
-.shop-now-button {
+#hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/media/homepage_banner.jpg");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+#hero-text {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding-top: 200px;
+    color: #FFF3D9;
+}
+
+.shop-hampers-button {
     background: black;
     color: white;
     min-width: 260px;
+}
+
+/* -------------------------------- index.html media queries */ 
+@media screen and (max-width: 576px) {
+    #hero-text h1 {
+        font-size: 25px;
+    }
+
+   #hero-text a {
+        font-size: 18px;
+    }
+
+    .shop-hampers-button {
+        min-width: 200px;
+    }
 }
 
 .btn-black {
@@ -64,9 +141,9 @@ body {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.shop-hampers-button:hover,
+.shop-hampers-button:active,
+.shop-hampers-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -234,29 +311,3 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
-
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
