@@ -12,7 +12,7 @@ class Testimonial(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        related_name='user_rating'
+        related_name='user_testimonial'
     )
     testimonial_title = models.CharField(max_length=254)
     testimonial_content = models.TextField(blank=True, null=True, default='')

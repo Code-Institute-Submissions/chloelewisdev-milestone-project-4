@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -45,8 +49,8 @@
         <div class="col-sm-12 col-md-6 blog-section-image">
             <img class="w-100"  src="{% static 'images/ch_blog.jpg' %}" alt="Campervan parked near a lake">
         </div>
-        <div class="col-sm-12 col-md-6 text-center blog-section-style">
-            <h2 class="logo-font blog-section-title">
+        <div class="col-sm-12 col-md-6 text-center blog-section-text">
+            <h2 class="logo-font">
                 Read our blog
             </h2>
             <p>Read the latest camping ideas and thoughts from the Camper Hamper owners!</p>
@@ -56,8 +60,8 @@
 </section>
 <section class="container-fluid testimonial-section">
     <div class="row">
-        <div class="col-sm-12 col-md-6 text-center testimonial-section-style">
-            <h2 class="logo-font testimonial-section-title">
+        <div class="col-sm-12 col-md-6 text-center testimonial-section-text">
+            <h2 class="logo-font testimonial-section-text">
                 Happy Campers
             </h2>
             <p>Read testimonials from customers that have enjoyed a Camper Hamper</p>

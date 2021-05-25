@@ -6,25 +6,21 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="logo-font dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="logo-font dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="logo-font dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="logo-font dropdown-item">All Hampers</a>
             </div>
         </li>
 
-<!-- was clothing -->
         <li class="nav-item">
             <a href="{% url 'products' %}?category=savoury" class="logo-font font-weight-bold nav-link text-black mr-5" id="savoury-link" aria-haspopup="true" aria-expanded="false">
                 Savoury
             </a>
         </li>
-<!-- was homeware -->
         <li class="nav-item">
             <a href="{% url 'products' %}?category=sweet" class="logo-font font-weight-bold nav-link text-black mr-5" id="sweet-link" aria-haspopup="true" aria-expanded="false">
                 Sweet
             </a>
         </li>
-<!-- was specials -->
         <li class="nav-item">
             <a href="{% url 'products' %}?category=campfire" class="logo-font font-weight-bold nav-link text-black" id="campfire-link" aria-haspopup="true" aria-expanded="false">
                 CampFire

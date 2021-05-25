@@ -1,0 +1,113 @@
+/* -------------------------------- index.html styles */ 
+
+#hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/media/homepage_banner.jpg");
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+#hero-text {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding-top: 200px;
+    color: #FFF3D9;
+}
+
+.shop-hampers-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.shop-hampers-button:hover,
+.shop-hampers-button:active,
+.shop-hampers-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.view-blog-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.view-blog-button:hover,
+.view-blog-button:active,
+.view-blog-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.about-section {
+    padding: 100px 130px;
+}
+
+.blog-section-text {
+    background-color: #B3C0AE
+}
+
+.blog-section-text h2{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.blog-section-text p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.blog-section-image {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.testimonial-section-text {
+    background-color: #FFF3D9;
+}
+
+.testimonial-section-text h2{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.testimonial-section-text p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.testimonial-section-image{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/* -------------------------------- index.html media queries */ 
+@media screen and (max-width: 576px) {
+    #hero-text h1 {
+        font-size: 25px;
+    }
+    
+    #hero-text a {
+        font-size: 18px;
+    }
+    
+    .shop-hampers-button {
+        min-width: 200px;
+    }
+    
+    .view-blog-button {
+        min-width: 200px;
+    }
+    }
