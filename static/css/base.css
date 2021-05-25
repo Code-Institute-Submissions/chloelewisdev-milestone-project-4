@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Julius Sans One';
+    font-family: 'Roboto';
 }
 
 /* from Bulma */
@@ -108,20 +108,84 @@ body {
     min-width: 260px;
 }
 
+.shop-hampers-button:hover,
+.shop-hampers-button:active,
+.shop-hampers-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.view-blog-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.view-blog-button:hover,
+.view-blog-button:active,
+.view-blog-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.about-section {
+    padding: 50px 80px;
+}
+
+
+.blog-section-title {
+    padding-top: 120px;
+}
+
+.blog-section-image {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.blog-section-style {
+    background-color: #FFF3D9;
+}
+
+.testimonial-section-title {
+    padding-top: 120px;
+}
+
+.tesimonial-section-image {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.testimonial-section-style {
+    background-color: #B3C0AE;
+}
+
+
+
 /* -------------------------------- index.html media queries */ 
 @media screen and (max-width: 576px) {
-    #hero-text h1 {
-        font-size: 25px;
-    }
-
-   #hero-text a {
-        font-size: 18px;
-    }
-
-    .shop-hampers-button {
-        min-width: 200px;
-    }
+#hero-text h1 {
+    font-size: 25px;
 }
+
+#hero-text a {
+    font-size: 18px;
+}
+
+.shop-hampers-button {
+    min-width: 200px;
+}
+
+.view-blog-button {
+    min-width: 200px;
+}
+}
+
 
 .btn-black {
     background: black;
@@ -141,15 +205,7 @@ body {
     color: white !important;
 }
 
-.shop-hampers-button:hover,
-.shop-hampers-button:active,
-.shop-hampers-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
+
 
 .text-black {
     color: #000 !important;

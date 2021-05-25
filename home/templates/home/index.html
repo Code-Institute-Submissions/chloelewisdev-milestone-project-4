@@ -25,6 +25,50 @@
 
     </div>
 </section>
+<section class="container about-section">
+    <div class="row text-center">
+        <div class="col">
+            <h2 class="logo-font">About</h2>
+            <div class="text-center text-justify">
+                <p>Camper Hampers provide the ultimate camping treat, remove the hassle
+                of food planning and instead enjoy one of our delicious hampers! From 
+                artisan cheeses and breads, to breakfast patisseries and treats around
+                the campfire...we have you covered so you can sit back, relax and really
+                enjoy your adventure!
+                </p>         
+            </div>    
+        </div>
+    </div>
+</section>
+<section class="container-fluid blog-section">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 blog-section-image">
+            <img class="w-100"  src="{% static 'images/ch_blog.jpg' %}" alt="Campervan parked near a lake">
+        </div>
+        <div class="col-sm-12 col-md-6 text-center blog-section-style">
+            <h2 class="logo-font blog-section-title">
+                Read our blog
+            </h2>
+            <p>Read the latest camping ideas and thoughts from the Camper Hamper owners!</p>
+            <a href="{% url 'blog' %}" class="logo-font view-blog-button btn btn-lg rounded-0 text-uppercase py-3">View Blog</a>
+        </div>
+    </div>
+</section>
+<section class="container-fluid testimonial-section">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 text-center testimonial-section-style">
+            <h2 class="logo-font testimonial-section-title">
+                Happy Campers
+            </h2>
+            <p>Read testimonials from customers that have enjoyed a Camper Hamper</p>
+            <a href="{% url 'testimonials' %}" class="logo-font view-blog-button btn btn-lg rounded-0 text-uppercase py-3">View Testimonials</a>
+        </div>
+        <div class="col-sm-12 col-md-6 testimonial-section-image">
+            <img class="w-100"  src="{% static 'images/ch_testimonials.jpg' %}" alt="Man and woman smiling next to a tent">
+        </div>
+
+    </div>
+</section>
 <!--div class="container h-100">
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
