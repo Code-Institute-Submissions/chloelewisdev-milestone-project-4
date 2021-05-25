@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-!8sei94q7e_8ljduz4(9oj*%kri8mqr(dtq=*$oom6so@l#__l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['camperhampers.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -121,16 +121,18 @@ WSGI_APPLICATION = 'camper_hampers.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
- DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+    'default': dj_database_url.parse(os.environ.get(DATABASE_URL))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://ynnvvwemllmjvh:e6da5be8b75e1276977fc86132af6a168b97e41626c5edb2e243396787121e28@ec2-34-252-251-16.eu-west-1.compute.amazonaws.com:5432/d1vvtakdb5svd1')
-}
 
 
 # Password validation
