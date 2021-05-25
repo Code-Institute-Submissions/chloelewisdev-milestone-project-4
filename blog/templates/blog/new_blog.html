@@ -26,7 +26,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h5 class="text-muted">Edit blog</h5>
+            <h5 class="text-muted">Add blog post</h5>
             <hr class="w-100 mb-1">
         </div>
     </div>
@@ -34,12 +34,12 @@
 <div class="container">
     <div class="row justify-content-md-center mb-5">
         <div class="col-12">
-            <form method="POST" action="{% url 'edit_blog' blog.id %}" class="form mb-5" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'new_blog' %}" class="form mb-5" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="text-center">
                     <a href="{% url 'blog' %}" class="btn btn-outline-dark rounded-5">Cancel</a>
-                    <button type="submit" class="btn form-button rounded-5">Update Blog</button>
+                    <button type="submit" class="btn form-button rounded-5">Add Blog</button>
                 </div>
             </form>
         </div>

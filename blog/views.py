@@ -42,7 +42,7 @@ def new_blog(request):
         form = BlogForm()
 
     form = BlogForm()
-    template = 'blog/add_blog.html'
+    template = 'blog/new_blog.html'
     context = {
         'form': form,
     }
