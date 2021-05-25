@@ -265,3 +265,27 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/*-------------------------------------------------------- Footer */
+
+#footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.fa-facebook-f {
+    color: #3B0918;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.fa-instagram {
+    color: #B3C0AE;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.fa-twitter {
+    color: #A49393;
+    font-size: 1.5rem;
+    padding: 10px;
+}
