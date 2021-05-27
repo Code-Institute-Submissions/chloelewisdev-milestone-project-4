@@ -31,11 +31,24 @@ body {
 
 
 /* -------------------------------- Navbar */
+
+
+@media screen and (max-width: 560px) {
+
+    .list-inline-item {
+        font-size: 10px;
+    }
+}
+
 @media screen and (max-width: 568px) {
     .list-inline-item:not(:last-child) {
         margin-right: 0rem;
     }
+    .list-inline-item {
+        font-size: 15px;
+    }
 }
+
 
 @media (min-width: 992px) {
     .logo-style {
