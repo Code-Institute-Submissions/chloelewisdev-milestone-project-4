@@ -37,6 +37,7 @@
   <title>Camper Hampers{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <div id="page-content"></div>
     <header class="nav-container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -45,7 +46,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search Hampers">
                 <div class="input-group-append">
                   <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                     <span class="icon">
@@ -131,19 +132,7 @@
 
     {% block content %}
     {% endblock %}
-    
-    <!--Footer
-    <footer id="footer">
-      <div class="container-fluid text-center">
-          <div class="row text-center">
-            <div class="col social-icons">
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-      </div>
-    </footer-->
+
     {% block postloadjs %}
       <script type="text/javascript">
         $(document).ready(function(){
@@ -151,6 +140,6 @@
         });
       </script>
     {% endblock %}
- 
+ </div>
   </body>
 </html>
