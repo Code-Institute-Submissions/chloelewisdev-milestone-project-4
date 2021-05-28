@@ -32,7 +32,9 @@ body {
 
 /* -------------------------------- Navbar */
 
-
+.navbar {
+    font-family: 'Josefin Sans', sans-serif;
+}
 @media screen and (max-width: 560px) {
 
     .list-inline-item {
@@ -84,6 +86,21 @@ body {
 
     .nav-link {
         padding: 0.10rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }
 /* -------------------------------- Fonts */
