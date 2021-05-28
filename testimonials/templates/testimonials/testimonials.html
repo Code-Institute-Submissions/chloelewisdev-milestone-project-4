@@ -25,25 +25,23 @@
         </div>
         <div class="row">
             {% for testimonial in testimonials %}
-            <div class="col-12 col-lg-6">
-                <p>{{ testimonial.testimonial_title }}</p>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p>{{ testimonial.testimonial_content }}</p>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p>By {{ testimonial.created_by }}</p>
-            </div>
-            {% endfor %}
-            {% for testimonial in testimonials %}
-                {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a> | 
-                </small>
-                <small class="ml-3">
-                    <a href="{% url 'delete_testimonial' testimonial.id %}">Delete</a> | 
-                </small>
-                {% endif %}
+                <div class="col-12">
+                        <div class="card card-style-testimonial border-secondary mb-4">
+                            <div class="card-body">
+                                <p class="font-weight-bold text-uppercase">{{ testimonial.testimonial_title }}</p>
+                                <p>{{ testimonial.testimonial_content }}</p>
+                                <p class="font-italic">By {{ testimonial.created_by }}</p>                      
+                                {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_testimonial' testimonial.id %}">Edit</a> | 
+                                </small>
+                                <small class="ml-3">
+                                    <a href="{% url 'delete_testimonial' testimonial.id %}">Delete</a> | 
+                                </small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
             {% endfor %}
         </div>
     </div>

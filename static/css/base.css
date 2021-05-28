@@ -299,7 +299,8 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/*-------------------------------------------------------- Footer */
+/*-------------------------------------------------------- Footer 
+
 
 #footer {
     background-color: #f8f9fa;
@@ -322,4 +323,17 @@ input[name='q']::placeholder {
     color: #A49393;
     font-size: 1.5rem;
     padding: 10px;
+}
+*/
+.card-style-blog {
+    background-color: #ebf9e5
+}
+
+.card-style-testimonial {
+    background-color: #FFF3D9
+}
+
+.scroll {
+    max-height: 100px;
+    overflow-y: auto;
 }

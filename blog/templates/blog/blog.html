@@ -23,15 +23,16 @@
                 <hr>
             </div>
         </div>
-        <div class="row">
+        <div class="row card card-style-blog">
+            <div class="card-body"></div>
             {% for blog in blog %}
-            <div class="col-12 col-lg-6">
-                <p>{{ blog.blog_title }}</p>
+            <div class="col-12">
+                <p class="font-weight-bold text-uppercase">{{ blog.blog_title }}</p>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12">
                 <p>{{ blog.blog_content }}</p>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12">
                 <p>By {{ blog.date_added }}</p>
             </div>
             {% endfor %}
@@ -45,6 +46,15 @@
                 </small>
                 {% endif %}
             {% endfor %}
+        </div>
+        <div class="text-center">
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">View hampers</span>
+        </a>
+        </div>
         </div>
     </div>
 {% endblock %}
