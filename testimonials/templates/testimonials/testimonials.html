@@ -15,20 +15,28 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container blog-heading">
         <div class="row">
             <div class="col-12">
                 <hr>
-                <h2 class="logo-font mb-4">Testimonials</h2>
+                <h2 class="logo-font mb-4">Camper Hampers Blog</h2>
                 <hr>
+                <img class="w-100 blog-page-image"  src="{% static 'images/ch_blog.jpg' %}" class="img-fluid" alt="Responsive image">
+
             </div>
         </div>
+    </div>
+    <div class="container testimonials-container">
+
         <div class="row">
+            
             {% for testimonial in testimonials %}
+
                 <div class="col-12">
                         <div class="card card-style-testimonial border-secondary mb-4">
                             <div class="card-body">
-                                <p class="font-weight-bold text-uppercase">{{ testimonial.testimonial_title }}</p>
+                                
+                                <p class="font-weight-bold text-uppercase logo-font"><i class="fas fa-campground"></i>{{ testimonial.testimonial_title }}</p>
                                 <p>{{ testimonial.testimonial_content }}</p>
                                 <p class="font-italic">By {{ testimonial.created_by }}</p>                      
                                 {% if request.user.is_superuser %}
@@ -44,5 +52,29 @@
                     </div>
             {% endfor %}
         </div>
+        <div class="text-center blog-page-btns">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">View hampers</span>
+            </a>
+        </div>
+        </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
 {% endblock %}

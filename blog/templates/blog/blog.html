@@ -15,19 +15,29 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    
+    <div class="container testimonials-heading">
         <div class="row">
             <div class="col-12">
                 <hr>
                 <h2 class="logo-font mb-4">Camper Hampers Blog</h2>
+                <h4>Read feedback from our customers below</h4>
                 <hr>
+                <img class="w-100 testimonials-page-image"  src="{% static 'images/ch_blog.jpg' %}" class="img-fluid" alt="Responsive image">
+
             </div>
         </div>
+    </div>
+    <div class="container blog-container">
+
         <div class="row card card-style-blog">
             <div class="card-body"></div>
             {% for blog in blog %}
+            <div class="col-12 text-center">
+                <i class="fas fa-campground"></i>
+            </div>
             <div class="col-12">
-                <p class="font-weight-bold text-uppercase">{{ blog.blog_title }}</p>
+                <p class="font-weight-bold text-uppercase logo-font text-center">{{ blog.blog_title }}</p>
             </div>
             <div class="col-12">
                 <p>{{ blog.blog_content }}</p>
@@ -47,14 +57,28 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <div class="text-center">
-        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-            <span class="icon">
-                <i class="fas fa-chevron-left"></i>
-            </span>
-            <span class="text-uppercase">View hampers</span>
-        </a>
+        <div class="text-center blog-page-btns">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">View hampers</span>
+            </a>
         </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
 {% endblock %}
