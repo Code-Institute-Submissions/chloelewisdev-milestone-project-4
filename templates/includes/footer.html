@@ -1,29 +1,30 @@
 <footer id="footer">
     <div class="row text-center text-black footer-icons">
         <div class="col">
-            <a target="_blank" href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/">
                 <i class="fab fa-facebook-f footer-icon" aria-hidden="true"></i>
-                <span class="sr-only">Facebook</span>
             </a>
-            <a target="_blank" href="https://www.instagram.com/">
+            <a href="https://www.instagram.com/">
                 <i class="fab fa-instagram footer-icon" aria-hidden="true"></i>
-                <span class="sr-only">Instagram</span>
             </a>
-            <a target="_blank" href="mailto:camperhampers@example.com">
+            <a href="mailto:camperhampers@example.com">
                 <i class="fas fa-envelope-open footer-icon" aria-hidden="true"></i>
-                <span class="sr-only">Email</span>
             </a>
         </div>
     </div>
     <div class="row text-center text-black footer-links">
         <div class="col">
-            <a href="{% url 'testimonials' %}" class="btn btn-sm btn-outline-black rounded-0">View Testimonials</a>
-            <a href="{% url 'blog' %}" class="btn btn-sm btn-outline-black rounded-0">View Blog</a>
+            <a href="{% url 'testimonials' %}" class="text-uppercase font-weight-bold footer-links">View Testimonials</a>
         </div>
     </div>
-    <div class="row mt-2 text-center text-black footer-text">
+    <div class="row text-center text-black footer-links">
         <div class="col">
-            <p>© Camper Hampers 2021 by Chloe Lewis MS4</p>
+            <a href="{% url 'blog' %}" class="text-uppercase font-weight-bold footer-links">View Blog</a>
+        </div>
+    </div>
+    <div class="row mt-2 text-center text-black copyright-text">
+        <div class="col">
+            <p>© CAMPER HAMPERS 2021 by Chloe Lewis MS4</p>
         </div>
     </div>
 </footer>

@@ -338,9 +338,8 @@ input[name='q']::placeholder {
     height: 150px;
     font-family: 'Josefin Sans', sans-serif;
     background-color: #d3d3d3;
-	color: #fff;
     font-size: 15px;
-    padding-top: 10px;;
+    padding-top: 10px;
 }
 
 .footer-link {
@@ -387,4 +386,24 @@ input[name='q']::placeholder {
 .testimonials-container {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.container-bag {
+    height: 100vh;
+}
+
+.footer-icons.i {
+    color:#3B0918
+}
+
+.footer-icons a:hover{
+    color:#821536;
+}
+
+.footer-links {
+    color:#3B0918
+}
+
+.footer-links a:hover{
+    color: #821536;
 }

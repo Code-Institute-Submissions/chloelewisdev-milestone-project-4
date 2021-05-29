@@ -19,9 +19,11 @@
         <div class="row">
             <div class="col-12">
                 <hr>
-                <h2 class="logo-font mb-4">Camper Hampers Blog</h2>
+                <h2 class="logo-font mb-4">Customer Testimonials</h2>
+                <h5 class="font-weight-bold">View feedback from our customers below</h5>
                 <hr>
-                <img class="w-100 blog-page-image"  src="{% static 'images/ch_blog.jpg' %}" class="img-fluid" alt="Responsive image">
+                <img class="w-100 testimonials-page-image"  src="{{ MEDIA_URL }}testimonials-header.jpg" class="img-fluid" alt="Responsive image">
+                
 
             </div>
         </div>
@@ -34,7 +36,7 @@
 
                 <div class="col-12">
                         <div class="card card-style-testimonial border-secondary mb-4">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 
                                 <p class="font-weight-bold text-uppercase logo-font"><i class="fas fa-campground"></i>{{ testimonial.testimonial_title }}</p>
                                 <p>{{ testimonial.testimonial_content }}</p>
@@ -52,13 +54,24 @@
                     </div>
             {% endfor %}
         </div>
-        <div class="text-center blog-page-btns">
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">View hampers</span>
-            </a>
+        <div class="row testimonial-page-btns">
+            <div class="col text-right">
+                <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0 btn-sm">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Home</span>
+                </a>
+            </div>
+            <div class="col text-left">
+                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-sm">
+                    <span class="text-uppercase">View Hampers</span>
+                    <span class="icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a>
+            </div>
+
         </div>
         </div>
     </div>
