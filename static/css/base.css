@@ -392,7 +392,7 @@ input[name='q']::placeholder {
     height: 100vh;
 }
 
-.footer-icons.i {
+.footer-icons {
     color:#3B0918
 }
 
@@ -406,4 +406,8 @@ input[name='q']::placeholder {
 
 .footer-links a:hover{
     color: #821536;
+}
+
+.empty-bag {
+    padding-bottom: 250px;
 }
