@@ -25,7 +25,8 @@ def new_blog(request):
     Allows owner to add new blog content
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Camper Hampers owners can do that.')
+        messages.error(
+            request, 'Sorry, only Camper Hampers owners can do that.')
         return redirect(reverse('blog'))
 
     if request.method == 'POST':
@@ -56,7 +57,8 @@ def edit_blog(request, blog_id):
     Enables superuser to edit a blog
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Camper Hampers owners can do that.')
+        messages.error(
+            request, 'Sorry, only Camper Hampers owners can do that.')
         return redirect(reverse('blog'))
 
     blog = get_object_or_404(OwnerBlog, pk=blog_id)
@@ -89,7 +91,8 @@ def delete_blog(request, blog_id):
     Allows superuser to delete a blog
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Camper Hampers owners can do that.')
+        messages.error(
+            request, 'Sorry, only Camper Hampers owners can do that.')
         return redirect(reverse('blog'))
 
     blog = get_object_or_404(OwnerBlog, pk=blog_id)

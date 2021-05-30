@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+   <div class="row">
+      <div class="col"></div>
+   </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -23,11 +19,12 @@
             <hr>
         </div>
     </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h5 class="text-muted">Edit Blog</h5>
-            <hr class="w-100 mb-1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h5 class="text-muted">Edit Blog</h5>
+                <hr class="w-100 mb-1">
+            </div>
         </div>
     </div>
 </div>
@@ -38,8 +35,8 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <div class="text-center">
-                    <a href="{% url 'blog' %}" class="btn btn-outline-dark rounded-5">Cancel</a>
-                    <button type="submit" class="btn form-button rounded-5">Update Blog</button>
+                <a href="{% url 'blog' %}" class="btn btn-outline-dark rounded-5">Cancel</a>
+                <button type="submit" class="btn form-button rounded-5">Update Blog</button>
                 </div>
             </form>
         </div>
