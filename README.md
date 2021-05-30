@@ -92,9 +92,8 @@ The website should be professional and user-friendly, providing an easy navigati
 * To make Camper Hampers seem a reputable company in order to encourage users to sign up, by creating a professional website, whilst maintaining a friendly appeal. 
 
 **Customer goals:**
-* App designed with mobile-first approach
+* Website designed with mobile-first approach
 * User friendly navbar
-* Enable users to easily scroll back to the top on longer pages
 * Relevant social media icons provided in the footer
 * Log in and register forms so the customer can sign up to have a Camper Hamper account.
 * Customer profile page which enables the user to manage their own information easily and view order history easily.
@@ -418,7 +417,7 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
     * icons were taken from this site for the forms, header, footer and buttons, as well as to add some styling to the blog and testimonial pages. 
 - [Google Fonts](https://fonts.google.com/)
 I used two complementary fonts from Google for my project: Josefin Sans and Open Sans. 
-- [Favicon](https://favicon.io/)
+- [Guager](https://gauger.io/fonticon/)
     * I used this website to create the favicon for the website 
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     * I used this tool to check whether there were any errors in my HTML and CSS code (as discussed in more detail in the Testing section).
@@ -601,7 +600,32 @@ The content of this website is entirely fictional and written by myself.
 
 ### Images
 
-- The images are all from [Pexels](https://www.pexels.com/) and [Unsplash] (www.unsplash.com), which is an open source library of photos, images and videos.
+- The images are all from [Pexels](https://www.pexels.com/) and [Unsplash](www.unsplash.com). 
+
+- Home page [Unsplash](https://unsplash.com/photos/GyE2Iuk3j9g)
+
+- Cheese hamper: [Unsplash](https://unsplash.com/photos/raNKGlQDT_o)
+
+- Bread hamper:[Unsplash](https://unsplash.com/photos/Emhz3miT6mo )
+
+- Savoury selection: [Pexels](https://www.pexels.com/photo/delicious-food-on-picnic-on-nature-4992828/ )
+
+- Sweet breakfast:[Unsplash](https://unsplash.com/photos/wkBbTvRm9K0)
+
+- Doughnuts: [Unsplash](https://unsplash.com/photos/uQ2njZpZ61o)
+
+- Campfire treats: [Unsplash](https://unsplash.com/photos/YndHL7gQIJE)
+
+- Campfire drinks: [Unsplash](https://unsplash.com/photos/rnAsJ38qio8)
+ 
+- Testimonials: [Unsplash](https://unsplash.com/photos/FpqDWmeNpyE)
+
+- Blog home: [Unsplash](https://unsplash.com/photos/Mta8r0bxhbo )
+
+- Blog page header: [Pexels](https://www.pexels.com/photo/people-in-tent-in-forest-5364988/)
+ 
+-Testimonials page header: [Pexels](https://www.pexels.com/photo/two-women-sitting-on-ground-near-bonfire-344102/)
+
 
 ### Acknowledgements
 
