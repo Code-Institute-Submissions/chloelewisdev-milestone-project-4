@@ -9,7 +9,6 @@ class TestimonialForm(forms.ModelForm):
         exclude = ('user',)
         fields = ['testimonial_title', 'testimonial_content', 'created_by']
 
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

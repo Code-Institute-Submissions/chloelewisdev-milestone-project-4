@@ -87,7 +87,7 @@ def edit_blog(request, blog_id):
 
 @login_required
 def delete_blog(request, blog_id):
-    """ 
+    """
     Allows superuser to delete a blog
     """
     if not request.user.is_superuser:

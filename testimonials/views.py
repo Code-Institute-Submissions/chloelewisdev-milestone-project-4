@@ -37,7 +37,7 @@ def add_testimonial(request):
                                     Please ensure the form is valid.')
     else:
         form = TestimonialForm()
-    
+
     form = TestimonialForm()
     template = 'testimonials/add_testimonial.html'
     context = {
@@ -53,7 +53,8 @@ def edit_testimonial(request, testimonial_id):
     Enables superuser to edit a testimonial
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Camper Hampers owners can do that.')
+        messages.error(
+            request, 'Sorry, only Camper Hampers owners can do that.')
         return redirect(reverse('home'))
 
     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
@@ -69,7 +70,8 @@ def edit_testimonial(request, testimonial_id):
                                      Please ensure the form is valid.')
     else:
         form = TestimonialForm(instance=testimonial)
-        messages.info(request, f'You are editing {testimonial.testimonial_title}')
+        messages.info(
+            request, f'You are editing {testimonial.testimonial_title}')
 
     template = 'testimonials/edit_testimonial.html'
     context = {
@@ -82,11 +84,12 @@ def edit_testimonial(request, testimonial_id):
 
 @login_required
 def delete_testimonial(request, testimonial_id):
-    """ 
+    """
     Allows superuser to delete a testimonial
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only Camper Hampers owners can do that.')
+        messages.error(
+            request, 'Sorry, only Camper Hampers owners can do that.')
         return redirect(reverse('home'))
 
     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
