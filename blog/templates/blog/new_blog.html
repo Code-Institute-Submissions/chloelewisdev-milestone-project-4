@@ -13,31 +13,22 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 col-md-8">
             <hr>
             <h2 class="logo-font mb-4">Blog</h2>
             <hr>
         </div>
     </div>
-</div>
-<div class="container-fluid">
-   <div class="row">
-      <div class="col mt-3 text-left">
-         <h5 class="text-muted">Add blog post</h5>
-         <hr class="w-100 mb-1">
-      </div>
-   </div>
-</div>
-<div class="container">
-   <div class="row  mb-5">
-      <div class="col-12 text-left">
-         <form method="POST" action="{% url 'new_blog' %}" class="form mb-5" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <div class="text-center">
-               <a href="{% url 'blog' %}" class="btn btn-outline-dark rounded-5">Cancel</a>
-               <button type="submit" class="btn form-button rounded-5 btn-black">Add Blog</button>
-            </div>
+    <div class="row">
+      <div class="col-12 col-md-8">
+          <p class="text-muted">Add a blog post</p>
+            <form method="POST" action="{% url 'new_blog' %}" class="mt-3" enctype="multipart/form-data">
+               {% csrf_token %}
+               {{ form|crispy }}
+               <div class="text-center">
+                  <a href="{% url 'blog' %}" class="btn btn-outline-dark rounded-5">Cancel</a>
+                  <button type="submit" class="btn form-button rounded-5 btn-black">Add Blog</button>
+               </div>
          </form>
       </div>
    </div>
