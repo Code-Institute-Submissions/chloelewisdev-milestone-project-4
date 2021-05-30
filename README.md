@@ -75,6 +75,7 @@ This section provides insight into the UX process, focusing on Camper Hamper’s
 * I am the creator of this app and want to see it succeed. I want the app to add value to the users and their camping experiences. I want to create a website that encourages users to make a purchase, and also to encourage users to easily return and purchase more hampers easily. Therefore I want the app to be fully responsive, fresh and modern in design, friendly and also intuitive to use. 
 * As the business owner, I want to be able to add new hamper products easily, edit hamper products and delete hamper products that are no longer available or that I no longer want to sell.
 * As the business owner, I want to users to leave real feedback via testimonials on the site. However, I also want to be able to manage these, therefore I want to have the ability to edit and delete these testimonials too.
+* As the business owner, I want to be able to easily add blog posts, and edit or delete these at a future date if needed. 
 
 ### Strategy plane: 
 
