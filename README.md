@@ -2,17 +2,13 @@
 
 ## Code Institute - Milestone Project 4
 
-NEED TO ADD
-![Camper Hampers responsive website mockup]( https://github.com/chloelewisdev/milestone-project-3/blob/master/static/images/Responsive-web-mockup.png)
+![Camper Hampers responsive website mockup]( https://github.com/chloelewisdev/milestone-project-4/blob/master/documentation/readme_images/responsive-web-mockup.png)
 
-This was the last of four Milestone Projects that made up the Full Stack Web Development Program at The Code Institute. The main requirements were to build a full-stack website with the use of HTML, CSS, JavaScript, Python, Django and a relational database. Accommodating payment services was another requirement for this project and this was achieved through the use of Stripe.
+The idea for this website was based on my own experiences of camping and going away in a campervan – I have always thought how amazing it would be to have a hamper of food or drinks prepared for you before you depart so that all hassle is removed on the first night and morning and you can just enjoy the adventure! The result is a website providing savoury, sweet and campfire hampers, which users can order to be delivered to their door in time for their departure. Users can create their own profile where they can store their personal information such as their default delivery address, view all their orders, pay securely to purchase a hamper, leave testimonials and view their order history, as well as the owner’s blog. 
 
-The idea for this website was based on my own experiences of camping and going away in a campervan – I have always thought how amazing it would be to have a hamper of food or drinks prepared for you before you depart so that all hassle is removed on the first night and morning and you can just enjoy the adventure! The result is a website providing savoury, sweet and campfire hampers, which users can order to be delivered on their departure. Users can create their own profile where they can store their personal information such as their delivery address, pay securely to purchase a hamper, leave testimonials and view their order history, as well as the owner’s blog. 
+This was the last of four Milestone Projects that made up the Full Stack Web Development Programme at The Code Institute. The main requirements were to build a full-stack website with the use of HTML, CSS, JavaScript, Python, Django and a relational database. Accommodating payment services was another requirement for this project and this was achieved through the use of Stripe.
 
-
-This was the third of four Milestone Projects that made up the Full Stack Web Development Program at The Code Institute. The main requirements were to build site a site using HTML, CSS, JavaScript, Python + Flask and MongoDB. 
-
-Click [here](http:// https://camperhampers.herokuapp.com/) to view the website live. 
+Click [here](https://camperhampers.herokuapp.com/) to view the website live. 
 
 **For testing purposes, please use the following credit card details:**
 
@@ -33,6 +29,8 @@ Click [here](http:// https://camperhampers.herokuapp.com/) to view the website l
 
 * [Existing Features](#Existing-Features)
     * [Features to consider implementing in the future](#Features-to-consider-implementing-in-the-future)
+
+* [Database Structure](#Database-Structure)
 
 * [Technologies Used](#Technologies-Used)
 
@@ -149,75 +147,40 @@ I decided that a 'Back To Top' button on the site would be useful on longer page
 
 I decided a clean white background with a box layout would be a good way to present information in the different sections, allowing enough space between text, images and any key features. 
 
-The wireframes can be viewed on [Figma](https://www.figma.com/file/giUuD5vECYMz4Z99Vt3HHw/Milestone-3?node-id=0%3A1)
+The wireframes can be viewed on [Figma](https://www.figma.com/file/id8P5uQyr2jNX05hUHXlRu/Milestone4-CamperHampers?node-id=0%3A1)
 
 ### Surface plane:
 
 I next moved on to the design work. 
 
 * **Colours & Logo:** 
-Colours were an important choice – I wanted the website to be modern, with colours based around camping to create a natural feel, for example a light green for nature, and pinks and dark purples similar to fire. I experimented with orange but this felt too bold. The images I chose from Pexels and Unsplash enabled me to choose the colour palette for the website, including the logo. I decided the logo would show the name of the company ‘CAMPER HAMPERS’. 
+Colours were an important choice – I wanted the website to be modern, with colours based around camping to create a natural feel, for example a light green for nature, and pinks and dark purples similar to those found in the campfire images. I experimented with orange but this felt too bold. The images I chose from Pexels and Unsplash enabled me to choose the colour palette for the website, including the logo. I decided the logo would show the name of the company ‘CAMPER HAMPERS’. 
 
-* **Typography:** I used Google Fonts to select the fonts for my project and decided on the font ‘Josefin Sans’for the logo and headings – I thought this worked well in uppercase and the design of the the ‘M’, ‘A’ reminded me of tents and yurts, therefore I thought this would be a good fitting. The font ‘Roboto’ complimented this for the body text. 
+* **Typography:** I used Google Fonts to select the fonts for my project and decided on the font ‘Josefin Sans’ for the logo and headings – I thought this worked well in uppercase and the design of the the ‘M’, ‘A’ reminded me of tents and yurts, therefore I thought this would be a good fitting. The font ‘Roboto’ complimented this for the body text. 
 
 * **Images:**  The images used on the website are all from Pexel and Unsplash. I chose images of hampers, relevant food and drinks, as well as camping/campervan pictures for the blog and images of people smiling in the outdoors for the testimonials.
 
 * **Layout:** I decided to keep the background clean, spacious and fresh by using a white background for the pages which enabled the images of products to stand out and meant the user was not distracted by busy pages. The testimonials and blog pages use Bootstrap cards to highlight the different content, with simple design to fit in with the rest of the site. 
 
-**Database Structure**
+## **Database Structure**
 
 Throughout the development stage of the project, SQLite3 was used as this is the default database included with Django. On deployment, you are given the option to utilise PostgreSQL as this is included with Heroku and this is what I chose to do.
 
-I also relied on Django’s default user model for authorization, allowing me to meet one of the project requirements of separating features by anonymous users, users in session and superusers. Further information about this feature can be found here: [django.contrib.auth.models] (https://docs.djangoproject.com/en/3.0/ref/contrib/auth/).
+I also relied on Django’s default user model for authorization, allowing me to meet one of the project requirements of separating features by anonymous users, users in session and superusers. Further information about this feature can be found here: [django.contrib.auth.models](https://docs.djangoproject.com/en/3.0/ref/contrib/auth/).
 
 
 Code Institute - Boutique Ado was used as a template for the majority of this project with the **Testimonials** and **Blog** models being added in to supplement the project.
 
+**BLOG** **APP**
 ### OwnerBlog Model
 
 | Name          | Database Key  | Field Type | Type Validation |
 | ------------- | ------------- | ---------- | --------------- |
-| Blog Title         | blog_title | CharField  | max_length=254  |
-| Blog Content | blog_content | TextField  | max_length=254  |
+| Blog Title    | blog_title    | CharField  | max_length=254  |
+| Blog Content  | blog_content  | TextField  | blank=True, null=True, default=''  |
+| Date Added.   | date_added    | DateTimeField | default=timezone.now |
 
-
-### Category Model
-
-| Name          | Database Key  | Field Type | Type Validation |
-| ------------- | ------------- | ---------- | --------------- |
-| Name          | name          | CharField  | max_length=254  |
-| Friendly Name | friendly_name | CharField  | max_length=254  |
-
-
-### Product Model
-
-| Name        | Database Key | Field Type    | Type Validation                                              |
-| ----------- | ------------ | ------------- | ------------------------------------------------------------ |
-| Category    | category     | ForeignKey    | "Category", null=True, blank=True, on_delete=models.SET_NULL |
-| SKU         | sku          | CharField     | max_length=254, null=True, blank=True                        |
-| Name        | name         | CharField     | max_length=254                                               |
-| Description | description  | TextField     |                                                              |
-| Price       | price        | DecimalField  | max_digits=6, decimal_places=2                               |
-| Image_URL   | imge_url     | URLField      | max_length=1024, null=True, blank=True                       |
-| Image       | image        | ImageField    | null=True, blank=True                                        |
-
-### **Profiles** App
-
-### UserProfile Model
-
-| Name                    | Database Key            | Field Type    | Type Validation                              |
-| ----------------------- | ----------------------- | ------------- | -------------------------------------------- |
-| User                    | user                    | OneToOneField | User, on_delete=models.CASCADE               |
-| Default Phone Number    | default_phone_number    | CharField     | max_length=20, null=True, blank=True         |
-| Default Street Address1 | default_street_address1 | CharField     | max_length=80, null=True, blank=True         |
-| Default Street Address2 | default_street_address2 | CharField     | max_length=80, null=True, blank=True         |
-| Default Town or City    | default_town_or_city    | CharField     | max_length=40, null=True, blank=True         |
-| Default County          | default_county          | CharField     | max_length=80, null=True, blank=True         |
-| Default Country         | default_country         | CountryField  | blank_label="Country", null=True, blank=True |
-| Default Postcode        | default_postcode        | CharField     | max_length=20, null=True, blank=True         |
-
-
-### **Checkout** App
+**CHECKOUT** **APP**
 
 ### Order Model
 
@@ -249,12 +212,55 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 | Quantity       | quantity       | IntegerField | null=False, blank=False, default=0                                                 |
 | Lineitem Total | lineitem_total | DecimalField | max_digits=6, decmial_places=2, null=False, blank=False, editable=False            |
 
+**PRODUCTS** **APP**
+
+### Category Model
+
+| Name          | Database Key  | Field Type | Type Validation |
+| ------------- | ------------- | ---------- | --------------- |
+| Name          | name          | CharField  | max_length=254  |
+| Friendly Name | friendly_name | CharField  | max_length=254  |
 
 
+### Product Model
 
-[Back to Contents](#contents)
+| Name        | Database Key | Field Type    | Type Validation                                              |
+| ----------- | ------------ | ------------- | ------------------------------------------------------------ |
+| Category    | category     | ForeignKey    | "Category", null=True, blank=True, on_delete=models.SET_NULL |
+| SKU         | sku          | CharField     | max_length=254, null=True, blank=True                        |
+| Name        | name         | CharField     | max_length=254                                               |
+| Description | description  | TextField     |                                                              |
+| Price       | price        | DecimalField  | max_digits=6, decimal_places=2                               |
+| Image_URL   | imge_url     | URLField      | max_length=1024, null=True, blank=True                       |
+| Image       | image        | ImageField    | null=True, blank=True                                        |
 
- 
+**PROFILES** **APP**
+
+### UserProfile Model
+
+| Name                    | Database Key            | Field Type    | Type Validation                              |
+| ----------------------- | ----------------------- | ------------- | -------------------------------------------- |
+| User                    | user                    | OneToOneField | User, on_delete=models.CASCADE               |
+| Default Phone Number    | default_phone_number    | CharField     | max_length=20, null=True, blank=True         |
+| Default Street Address1 | default_street_address1 | CharField     | max_length=80, null=True, blank=True         |
+| Default Street Address2 | default_street_address2 | CharField     | max_length=80, null=True, blank=True         |
+| Default Town or City    | default_town_or_city    | CharField     | max_length=40, null=True, blank=True         |
+| Default County          | default_county          | CharField     | max_length=80, null=True, blank=True         |
+| Default Country         | default_country         | CountryField  | blank_label="Country", null=True, blank=True |
+| Default Postcode        | default_postcode        | CharField     | max_length=20, null=True, blank=True         |
+
+
+**TESTIMONIALS** **APP**
+
+### Testimonial Model
+
+| Name          | Database Key  | Field Type | Type Validation |
+| ------------- | ------------- | ---------- | --------------- |
+| User          | user          | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True related_name='user_testimonial' |
+| Testimonial Title  | testimonial_title  | CharField | max_length=254 |
+| Testimonial Content  | testimonial_content   | TextField| blank=True, null=True, default='' |
+| Created By | created_by   | CharField| max_length=254, default=''|
+
 
 **Existing Features** 
 
@@ -263,20 +269,23 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 * **Colour palette** used logically across the site, for example the colour of the Testimonials section on the homepage takes the user to the Testimonials page which shows cards with the same background colour displaying the testimonials. The colour used for the Blog on the homepage is also similar to the colour used on the Blog page (however the shade is slightly lighter to enable easier reading). 
 * **Bootstrap Toasts** used for all flashed messages after user has completed an action.
 * **Search bar** on the abovementioned navbar sits at the top of the screen and is linked to keyword searches. 
-* **Home** - The user sees an image and introductory title explaining the purpose of the website. The user contains a CTA which links to the products page. When scrolling down, the user is then presented an option to click on a button to view the Camper Hampers blog, and further down the user can also click to view a page containing Customer Testimonials. 
 
-* **Log In page** - This feature contains a log in form where an existing user can input their username and password to log in. Once details have been entered, the user can click on ‘Submit’ and this queries the DB to see if the user already exists. If they enter the wrong password and/or username, they are shown a message telling the username that the details are incorrect and to try again. Users on this page that don’t yet have an account are prompted to sign up with a message and sign up button underneath the log in form.  Once users successfully log in, they are taken to the home page.
+* **Home** 
+
+- The user sees an image and introductory title explaining the purpose of the website. The user contains a CTA which links to the products page. When scrolling down, the user is then presented an option to click on a button to view the Camper Hampers blog, and further down the user can also click to view a page containing Customer Testimonials. 
+
+* **Log In page** 
+
+- This feature contains a log in form where an existing user can input their username and password to log in. Once details have been entered, the user can click on ‘Submit’ and this queries the DB to see if the user already exists. If they enter the wrong password and/or username, they are shown a message telling the username that the details are incorrect and to try again. Users on this page that don’t yet have an account are prompted to sign up with a message and sign up button underneath the log in form.  Once users successfully log in, they are taken to the home page.
 
 * **All Products page**
 
-- Bootstrap cards with Basic product information: Image, Product Name, Price and Category.
+-  Bootstrap cards with Basic product information: Image, Product Name, Price and Category.
 - Clicking the image takes the user to the specific product detail page.
 - Clicking the Category name will filter, and display, all the products for that Category (categories include Savoury, Sweet and CampFire).
 - Sort dropdown allows the user to manipulate the display by Name, Category, and Price - this also reversed.
 - Back to Top button at the bottom right of the screen.
 - If the user is a SuperUser, they ‘Edit’ and ‘Delete’ links are displayed to allow easy management of products. 
-
- 
 
 * **Product Detail page**
 - The user will see a larger product image along with the Product Name, Product Description, Price and Category of the product. 
@@ -291,8 +300,6 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - The user will be able to adjust the quantity of the items in the bag using the increase/decrease icons and clicking the update link or remove the whole line by clicking the remove link.
 - The buttons at the bottom allow the user to confirm that they wish to proceed to secure checkout, which if clicked takes the user to the checkout page or to the user can choose to return to the All Products page.
 - There is a back to top button added on this page, in case the user adds several items and in particular is viewing on a smaller screen – the back to top button should enable easy navigation for the user rather than scrolling back up should they wish to return to the top of the page. 
-
-
 
 * **Checkout page**
 - The user can view several sections of information on this page, including user details and delivery details, as well as an order summary. 
@@ -350,8 +357,7 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 
 #### Error pages: 404 and 500 pages
 
-- Built with the same structure as the auth pages, these two pages have a large hero image with a textbox notifying the user of the issue they have come across.
-- As well as the error message, they also feature buttons to take users back to the home page and include the hotel's email address if users want to get in touch.
+- Simple error message, they also feature buttons to take users back to the home page and include the hotel's email address if users want to get in touch.
 
 
 ### Features to consider implementing in the future:
@@ -359,7 +365,8 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 * A future feature to add would be a Contact Us page along with a contact form.
 * Additionally it would be good if there was a blog sign-up form, so that the company could collect data for future marketing. The user would then be emailed when a new blog post was published, and also this would be a way of communicating any further marketing information at the same time. The company could also use these details for asking customers to leave a testimonial if they hadn’t already done so. 
 * The blog could be developed much further. For example, as more blog posts are published, it would be good if there was a category option added to the model, so that the admin could choose to select from a range of options such as ‘hampers’, ‘camping’, ‘general’ and ‘news’. A search bar to enable the user to then search the content of the blog page would also be brilliant. And it would be useful if the user could filter the blog by category. 
-* It would be great if users could select an image to upload when leaving a testimonial too, in addition to their text. 
+* It would be great if users could select an image to upload when leaving a testimonial too, in addition to their text.
+* It would be good if the user could select a specified date for delivery. 
 
 
 ## Technologies Used 
@@ -402,7 +409,7 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - [Stripe](https://stripe.com/en-se)
     * Stripe was used to add the secure payment feature to the site.
 - [AWS S3 Bucket](https://aws.amazon.com/s3/)
-    * - used the S3 and IAM modules for storage and user access.
+    * I used the S3 and IAM modules for storage and user access.
 - [Gmail](https://www.google.com/intl/sv/gmail/about/#)
     * Google's free email service used to send confirmation emails to users who have made reservations.
 - [Figma](https://www.figma.com/) 
@@ -423,13 +430,12 @@ I used two complementary fonts from Google for my project: Josefin Sans and Open
 
 **Resources**
 
-* [Code Institute Course Content Boutique Ado](https://courses.codeinstitute.net/) – This website was possibly mostly thanks to the Code Institute’s Boutiqe Ado project, and the main structure and model was taken from this. 
-part of the course 
+* [Code Institute Course Content Boutique Ado](https://courses.codeinstitute.net/) – This website was possible mostly thanks to the Code Institute’s Boutiqe Ado project, and the main structure and model was taken from this. 
 * Code Institute **SLACK Community** - General resource
 * [Stack Overflow](https://stackoverflow.com/) – General resource
 * [W3C Schools](https://www.w3schools.com/) 
 * [CSS-Tricks](https://css-tricks.com/) - General resource
-* [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
+* [Techsini](https://techsini.com/multi-mockup/index.php) - Responsive website mockup image generator.
 
 
 ## Testing:
@@ -501,7 +507,6 @@ Deployment of the site was achieved by following the steps below:
 - Once site was deployed, clicked "View" to launch the app and be able to view it within the browser.
 - Heroku now updates automatically every time you push to GitHub.
 
-[Back to Contents](#contents)
 
 ### AWS
 
@@ -550,7 +555,6 @@ In order for the static css, js and media files to be stored and useable with He
 - Create a custom_storage file.
 - Run `python manage.py collectstatic` and transfer the static info to AWS.
 
-- [Back to Contents](#contents)
 
 ###  LOCAL HOSTING
 
@@ -588,8 +592,6 @@ If you wish to clone a copy of my project, feel free. You will need to:
   ```
 
 - The app can now be run locally by typing python manage.py in the terminal and will be available in your browser using the address `http://127.0.0.1:8000`.
-
-[Back to Contents](#contents)
 
 ## Credits
 
