@@ -60,8 +60,7 @@ No errors were presented.
 
 #### **JavaScript**
 
-I used [JSHint](https://jshint.com/) to check my JavaScript files.
-- *script.js* - no errors were shown for this file
+I used [JSHint](https://jshint.com/) to check my JavaScript code. No errors were shown.
 
 
 #### **Python**

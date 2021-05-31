@@ -146,7 +146,7 @@ I decided that a 'Back To Top' button on the site if there were longer pages, su
 
 I decided a clean white background with a box layout would be a good way to present information in the different sections, allowing enough space between text, images and any key features. 
 
-The wireframes can be viewed on [Figma](https://www.figma.com/file/id8P5uQyr2jNX05hUHXlRu/Milestone4-CamperHampers?node-id=0%3A1)
+The wireframes can be viewed on [Figma](https://www.figma.com/file/id8P5uQyr2jNX05hUHXlRu/Milestone4-CamperHampers?node-id=0%3A1) . Please select the different pages from the dropdown menu on the left to view desktop, mobile and table wireframes for each project.
 
 ### Surface plane:
 
@@ -207,7 +207,6 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 | -------------- | -------------- | ------------ | ---------------------------------------------------------------------------------- |
 | Order          | order          | ForeignKey   | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
 | Product        | product        | ForeignKey   | Product, null=False, blank=False, on_delete=models.CASCADE                         |
-| Product Size   | product_size   | CharField    | max_length=2, null=True, blank=True                                                |
 | Quantity       | quantity       | IntegerField | null=False, blank=False, default=0                                                 |
 | Lineitem Total | lineitem_total | DecimalField | max_digits=6, decmial_places=2, null=False, blank=False, editable=False            |
 
@@ -268,15 +267,15 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 * **Bootstrap Toasts** used for all flashed messages after user has completed an action.
 * **Search bar** on the abovementioned navbar sits at the top of the screen and is linked to keyword searches. 
 
-* **Home** 
+* **HOME** 
 
 - The user sees an image and introductory title explaining the purpose of the website. The user contains a CTA which links to the products page. When scrolling down, the user is then presented an option to click on a button to view the Camper Hampers blog, and further down the user can also click to view a page containing Customer Testimonials. 
 
-* **Log In page** 
+* **LOG IN PAGE** 
 
 - This feature contains a log in form where an existing user can input their username and password to log in. Once details have been entered, the user can click on ‘Submit’ and this queries the DB to see if the user already exists. If they enter the wrong password and/or username, they are shown a message telling the username that the details are incorrect and to try again. Users on this page that don’t yet have an account are prompted to sign up with a message and sign up button underneath the log in form.  Once users successfully log in, they are taken to the home page.
 
-* **All Products page**
+* **ALL PRODUCTS PAGE**
 
 -  Bootstrap cards with Basic product information: Image, Product Name, Price and Category.
 - Clicking the image takes the user to the specific product detail page.
@@ -284,20 +283,20 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - Sort dropdown allows the user to manipulate the display by Name, Category, and Price - this also reversed.
 - If the user is a SuperUser, they ‘Edit’ and ‘Delete’ links are displayed to allow easy management of products. 
 
-* **Product Detail page**
+* **PRODUCT DETAIL PAGE**
 - The user will see a larger product image along with the Product Name, Product Description, Price and Category of the product. 
 - The user can edit the quantity of the product displayed, by using the increase and decrease quantity icons which are placed either side of Number Input Field. This field can also be updated by using the up/down arrows that appear.
 - The user can choose to click a button to add the product(s) to their bag or they can click a button to keep shopping – these options are available below the quantity input field.
 - ‘Keep Shopping’ button returns the user to the All Products page and ‘Add to Bag’ button adds items to the bag which then displays a Bootsrap Toast confirming success of the action. The bag then keeps a running bag total and display of the contents as the user adds or removes items to the bag whilst on the site. 
 
 
-* **Bag page**
+* **BAG PAGE**
 
 - The user is shown a summary of the items in their bag, including product image, description, price and quantity. 
 - The user will be able to adjust the quantity of the items in the bag using the increase/decrease icons and clicking the update link or remove the whole line by clicking the remove link.
 - The buttons at the bottom allow the user to confirm that they wish to proceed to secure checkout, which if clicked takes the user to the checkout page or to the user can choose to return to the All Products page.
 
-* **Checkout page**
+* **CHECKOUT PAGE**
 - The user can view several sections of information on this page, including user details and delivery details, as well as an order summary. 
 - The user is required to complete the checkout form before being able to continue the checkout process. This includes completing required fields (the user is shown a message if they try to submit the form and haven’t completed them, asking then to complete the required fields in order to continue, otherwise the user cannot submit the form). 
 - If the user has created an account, they can choose to save their details on this form to their profile. 
@@ -306,18 +305,18 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - Once the user submits the payment information an opaque spinning overlay appears to show that the payment is being processed.
 
 
-* **Checkout success page**
+* **CHECKOUT SUCCESS PAGE**
 - The user is presented with a summary of their purchase, including order number and contact details and a Thank You message.
 - A Bootstrap Toast also displays to say that the order has been processed and that a confirmation has been sent to the user’s email.
 - A button under the summary enables to user to return to the All Products page. 
 
-* **My Profile page**
+* **MY PROFILE PAGE**
 
 -	The user is presented with a question asking if they have been happy with their hampers, and if so they can click on a button to ‘Leave a Testimonial’ which takes the user through to a page where they can add a testimonial. 
 -	Under this the user can view their default delivery information, which is stored in their profile for delivery on future orders.
 -	The user can also view their Order History, including an Order Number, the Date the order was made, the items purchased and the total cost of the order. 
 
-*  **Testimonials page**
+*  **TESTIMONIALS PAGE**
 
 -	The user can see an image of people smiling along with an introductory title and text
 -	Underneath the user can see a list of different testimonials displayed simply in cards with a border for easy reading. The testimonials include a title, testimonial text, and the name of the author. 
@@ -327,7 +326,7 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 -	If the site admin wishes to add a testimonial to the page, they can easily click on the ‘My Account’ dropdown and click on ‘Admin Add Testimonial’, which takes them through to the page containing a form to add a testimonial. 
 -	At the bottom of the page the user can choose to return to the Home page or choose to View Hampers.
 
-*  **Blog page**
+*  **BLOG PAGE**
 
 -	The user can see an image of a tent in the woods, along with an introductory title and text
 -	Underneath the user can see an introductory blog article from the author, which includes blog title, blog text and the date posted. 
@@ -336,12 +335,12 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 -	At the bottom of the page the user can choose to return to the Home page or choose to View Hampers.
 -	
 
-* **Sign Up** 
+* **SIGN UP** 
 
 - This feature contains a form where the user can input a username and password in order to create an account. If they enter a username that already exists, they are shown a message explaining this and asking them to try again. Once the user clicks on ‘Sign Up’, the user is sent an email which contains a link they have to click on in order to confirm registration. The link in the email takes the user to a page on the site where they can confirm their registration. Once confirmed, the user is taken to the Products page.  
 
 
-* **Log Out** 
+* **LOG OUT** 
 
 - This feature appears in the nav bar under My Account when a user is logged in.
 - This page can only be accessed by users that are not authenticated.
@@ -349,7 +348,7 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - Once signed out, users are redirected back to the Home page and they can no longer view their My Profile page. 
 
 
-* **Footer** - the footer contains social media icons with links to social media pages that open up in a new page. The Footer also contains an e-mail link in case users want to make contact by email. Also in the Footer there are links to view the ‘Testimonials’ page and the ‘Blog’ page. These were placed here rather than the main nav bar so as not to distract the user from browsing products, but also to make sure the user has access to these pages wherever they are on the site. 
+* **FOOTER** - the footer contains social media icons with links to social media pages that open up in a new page. The Footer also contains an e-mail link in case users want to make contact by email. Also in the Footer there are links to view the ‘Testimonials’ page and the ‘Blog’ page. These were placed here rather than the main nav bar so as not to distract the user from browsing products, but also to make sure the user has access to these pages wherever they are on the site. 
 
 #### Error pages: 404 and 500 pages
 
@@ -588,7 +587,7 @@ If you wish to clone a copy of my project, feel free. You will need to:
 
   ```
 
-- The app can now be run locally by typing python manage.py in the terminal and will be available in your browser using the address `http://127.0.0.1:8000`.
+- The app can now be run locally by typing python manage.py runserver. Once you run your project locally, add '/admin' to the locally deployed project's URL.
 
 ## Credits
 
@@ -622,7 +621,7 @@ The content of this website is entirely fictional and written by myself.
 
 - Blog page header: [Pexels](https://www.pexels.com/photo/people-in-tent-in-forest-5364988/)
  
--Testimonials page header: [Pexels](https://www.pexels.com/photo/two-women-sitting-on-ground-near-bonfire-344102/)
+- Testimonials page header: [Pexels](https://www.pexels.com/photo/two-women-sitting-on-ground-near-bonfire-344102/)
 
 
 ### Acknowledgements
