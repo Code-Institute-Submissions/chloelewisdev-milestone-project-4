@@ -23,7 +23,8 @@ To return to the previous document, click [here]( https://github.com/chloelewisd
 
 ### Issues found from manual testing:
 - I realised that when physically viewing the dropdown items on mobile, the menu items were difficult to select as they were too close to each other, meaning the user could click on the wrong link and a frustrating user experience. I therefore added extra padding here to allow for more space between the items and to improve the user experience. 
-- I also realised that the Shopping Bag page on iPad did not display correctly, with too much white space at the top. Unfortunately I was unable to fix this due to time constraints of the project however this would be something that I would prioritise for the website in the future. 
+- I also realised that the Shopping Bag page on iPad did not display correctly, with too much white space at the top when the sopping bag was empty or with only one product in. Unfortunately I was unable to fix this due to time constraints of the project however this would be something that I would prioritise for the website in the future. 
+- I had originally added a back to top button for the All Products page, the Testimonials page and Blog page. However, there was a bug in the code which I could not fix, meaning the button was appearing on the pages but not working. I therefore decided to remove this, rather than create a negative user experience. However this would be something I'd look to prioritise in adding in the future. 
 
 
 

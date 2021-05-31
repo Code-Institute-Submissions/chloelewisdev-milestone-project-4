@@ -142,7 +142,7 @@ I wanted to make sure it would be easy for users to navigate between the pages, 
 
 I wanted to ensure there would be a sticky footer as I knew on many pages there wouldn’t be a lot of content and I wanted this to still be a positive user experience. I also wanted the Blog and Testimonials to always be available to view on the footer. 
 
-I decided that a 'Back To Top' button on the site would be useful on longer pages, such as the All Products page, the Testimonials page and the Blog page (which could grow to be much longer in the future). 
+I decided that a 'Back To Top' button on the site if there were longer pages, such as the All Products page, the Testimonials page and the Blog page (which could grow to be much longer in the future). 
 
 I decided a clean white background with a box layout would be a good way to present information in the different sections, allowing enough space between text, images and any key features. 
 
@@ -264,7 +264,6 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 **Existing Features** 
 
 * **Fixed navigation** - allows the user to easily navigate to different sections of the website and in particular search for products, view products, view total of items added to bag, click on their bag which can take the user through to checkout, and view their profile – these features are available to the user on the nav bar across all pages. 
-* **'Back to top' button** - enables users to quickly move back to the top of the page rather than scrolling back up on longer pages or pages which may have longer content in the future (blog page for example).
 * **Colour palette** used logically across the site, for example the colour of the Testimonials section on the homepage takes the user to the Testimonials page which shows cards with the same background colour displaying the testimonials. The colour used for the Blog on the homepage is also similar to the colour used on the Blog page (however the shade is slightly lighter to enable easier reading). 
 * **Bootstrap Toasts** used for all flashed messages after user has completed an action.
 * **Search bar** on the abovementioned navbar sits at the top of the screen and is linked to keyword searches. 
@@ -283,7 +282,6 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - Clicking the image takes the user to the specific product detail page.
 - Clicking the Category name will filter, and display, all the products for that Category (categories include Savoury, Sweet and CampFire).
 - Sort dropdown allows the user to manipulate the display by Name, Category, and Price - this also reversed.
-- Back to Top button at the bottom right of the screen.
 - If the user is a SuperUser, they ‘Edit’ and ‘Delete’ links are displayed to allow easy management of products. 
 
 * **Product Detail page**
@@ -298,7 +296,6 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 - The user is shown a summary of the items in their bag, including product image, description, price and quantity. 
 - The user will be able to adjust the quantity of the items in the bag using the increase/decrease icons and clicking the update link or remove the whole line by clicking the remove link.
 - The buttons at the bottom allow the user to confirm that they wish to proceed to secure checkout, which if clicked takes the user to the checkout page or to the user can choose to return to the All Products page.
-- There is a back to top button added on this page, in case the user adds several items and in particular is viewing on a smaller screen – the back to top button should enable easy navigation for the user rather than scrolling back up should they wish to return to the top of the page. 
 
 * **Checkout page**
 - The user can view several sections of information on this page, including user details and delivery details, as well as an order summary. 
@@ -366,6 +363,7 @@ Code Institute - Boutique Ado was used as a template for the majority of this pr
 * The blog could be developed much further. For example, as more blog posts are published, it would be good if there was a category option added to the model, so that the admin could choose to select from a range of options such as ‘hampers’, ‘camping’, ‘general’ and ‘news’. A search bar to enable the user to then search the content of the blog page would also be brilliant. And it would be useful if the user could filter the blog by category. 
 * It would be great if users could select an image to upload when leaving a testimonial too, in addition to their text.
 * It would be good if the user could select a specified date for delivery. 
+* A back to top button on longer pages would be useful for a positive user experience. This was not something I managed to implement in time for the project submission but would be something I'd look to implement as a priority in the future, especially as the company grows, more products, blogs and testimonials are added. 
 
 
 ## Technologies Used 
