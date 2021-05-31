@@ -42,16 +42,15 @@
             <div class="col-12">
                <p>By {{ blog.date_added }}</p>
             </div>
-         {% endfor %}
-         {% for blog in blog %}
-         {% if request.user.is_superuser %}
-            <small class="ml-3">
-            <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
-            </small>
-            <small class="ml-3">
-            <a href="{% url 'delete_blog' blog.id %}">Delete</a> | 
-            </small>
-         {% endif %}
+            {% for blog in blog %}
+            {% if request.user.is_superuser %}
+               <small class="ml-3">
+               <a href="{% url 'edit_blog' blog.id %}">Edit</a> | 
+               </small>
+               <small class="ml-3">
+               <a href="{% url 'delete_blog' blog.id %}">Delete</a> | 
+               </small>
+            {% endif %}
          {% endfor %}
    </div>
    <div class="row blog-page-btns">
